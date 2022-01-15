@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>This is a Calorie Calculator</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        h1{
+            text-align: center;
+        }
+        div{
+            text-align: center;
+        }
+        body{
+            background-color: rgba(53,54,58,1);
+            color: white;
+        }
+        p{
+            font-size: 20px;
+        }
+        img{
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+    <body>
+        <!--ส่วนที่ 1 โปรแกรมคำนวณแคลอรี่ ชาย,หญิง-->
+        <h1 class="text-white bg-danger">โปรแกรมคำนวณแคลอรี่ Calorie Calculator</h1>
+        <div>
+            <input id="inputValue" type="number">
+        </div>
+        <br>
+        <div>
+            <button class=" text-white bg-primary" onclick="toMenProgram(document.getElementById('inputValue').value)">แคลอรี่สำหรับผู้ชาย
+        </button>
+            <button class=" text-white bg-primary" onclick="toWomenProgram(document.getElementById('inputValue').value)">แคลอรี่สำหรับผู้หญิง
+        </button><br><br>
+            <h3><p id="result"></p></h3>
+        </div>
+        <br>
+        <!--ส่วนที่ 2 คำนวณแคลอรี่จากเมนูอาหารที่มีรับประทานในชีวิตประจำวัน-->
+        <div>
+            <h2 class="text-white bg-success">คำนวณแคลอรี่จากเมนูอาหารตามสั่งที่รับประทานในชีวิตประจำวัน</h2>
+        </div>  
+        <div class= "formstyle">  
+                <form name = "form1"> 
+    <!--การแสดงผลและคำนวณ-->  
+            <input id = "calc" type ="text" name = "answer">&ensp;
+            <input type = "button" class=" text-white bg-primary" value = "ผลรวม" 
+            onclick = "form1.answer.value = eval(form1.answer.value)">&ensp;
+            <input type = "button" class=" text-white bg-danger" value = "ยกเลิก" 
+            onclick = "form1.answer.value = ' ' " id= "clear" ><br> <br>
+        </div>  
+    <!--เมนูต่างๆ-->
+        <div>
+            <p class="bg-success">1.ผัดกะเพราหมูสับ 1 จาน 580 แคลอรี่</p>
+            <img src="https://pbs.twimg.com/media/ENrLThiUcAE3Cdr?format=jpg&name=large"><br><br>
+            <input type = "button" class=" text-white bg-success" value = "เลือก" 
+            onclick = "form1.answer.value += '+580' "><br><br>
+        
+            <p class="bg-success">2.เส้นใหญ่ ผัดซีอิ้วหมู 1 จาน 675 แคลอรี่</p>
+            <img src="http://www.fondation-wyeth.org/wp-content/uploads/2021/01/maxresdefault-1-8.jpg"><br><br>
+            <input type = "button" class=" text-white bg-success" value = "เลือก" 
+            onclick = "form1.answer.value += '+675' "><br><br>
+
+            <p class="bg-success">3.ข้าวผัดหมูใส่ไข่ 1 จาน 650 แคลอรี่</p>
+            <img src="https://food.mthai.com/app/uploads/2017/02/fried-rice.jpg"><br><br>
+            <input type = "button" class=" text-white bg-success" value = "เลือก" 
+            onclick = "form1.answer.value += '+650' "><br><br>
+
+            <p class="bg-success">4.หมูกระเทียมราดข้าว 1 จาน 500 แคลอรี่</p>
+            <img src="https://i.pinimg.com/originals/39/fe/f2/39fef2c8d7332d0cc87428008a1cd1bb.jpg"><br><br>
+            <input type = "button" class=" text-white bg-success" value = "เลือก" 
+            onclick = "form1.answer.value += '+500' "><br><br>
+
+            <p class="bg-success">5.สุกี้น้ำทะเล 1 จาน 220 แคลอรี่</p>
+            <img src="http://www.thaitechno.net/uploadedimages/c1/Product_47949_971991064_fullsize.jpg"><br><br>
+            <input type = "button" class=" text-white bg-success" value = "เลือก" 
+            onclick = "form1.answer.value += '+220' "><br><br>
+
+            <p class="bg-success">6.ไข่เจียวกุ้งราดข้าว 1 จาน 320 แคลอรี่</p>
+            <img src="https://img.wongnai.com/p/1920x0/2019/07/14/b95a780250774296b629bb52d9eaccff.jpg"><br><br>
+            <input type = "button" class=" text-white bg-success" value = "เลือก" 
+            onclick = "form1.answer.value += '+320' "><br><br>
+
+            <p class="bg-success">7.โค้ก ขวดเล็ก 1 ขวด 174 แคลอรี่</p>
+            <img src="https://static.bigc.co.th/media/catalog/product/8/8/8855199141018.jpg"><br><br>
+            <input type = "button" class=" text-white bg-success" value = "เลือก" 
+            onclick = "form1.answer.value += '+174' "><br><br>
+
+            <h1>I'm done!!!</h1>
+            <input type = "button" class=" text-white bg-primary" value = "ผลรวม" 
+        onclick = "form1.answer.value = eval(form1.answer.value)">
+    </div>
+</form>
+    <script src="app.js"></script>
+    <br><br>
+</body>
+</html>
